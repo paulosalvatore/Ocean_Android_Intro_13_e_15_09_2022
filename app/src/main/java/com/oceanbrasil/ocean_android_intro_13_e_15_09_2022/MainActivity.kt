@@ -48,6 +48,10 @@ class MainActivity : AppCompatActivity() {
             // Criamos a Intent (intenção) de ir dessa tela para a ResultadoActivity
             val intentNovaTela = Intent(this, ResultadoActivity::class.java)
 
+            // Inserimos, dentro da intent, o nome que foi digitado
+            val nomeDigitado = etNome.text.toString()
+            intentNovaTela.putExtra("NOME_DIGITADO", nomeDigitado)
+
             // Registramos a Intent no Android, especificando que é uma Activity
             startActivity(intentNovaTela)
         }
