@@ -9,9 +9,12 @@ class ResultadoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado)
 
+        // Pegamos o elemento Button (btVoltar) na tela, pelo ID
         val btVoltar = findViewById<Button>(R.id.btVoltar)
 
+        // Adicionamos um listener para o btVoltar
         btVoltar.setOnClickListener {
+            // Finalizamos a tela, pois a MainActivity está por baixo
             finish()
         }
     }
