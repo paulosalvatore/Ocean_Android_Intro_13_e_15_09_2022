@@ -1,5 +1,6 @@
 package com.oceanbrasil.ocean_android_intro_13_e_15_09_2022
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Detectar o clique no botão
+        // Atualizar TextView com conteúdo do EditText
 
         // Pegamos o elemento Button na tela, pelo ID
         val btEnviar = findViewById<Button>(R.id.btEnviar)
@@ -35,6 +36,20 @@ class MainActivity : AppCompatActivity() {
             } else {
                 etNome.error = "Digite um nome válido!"
             }
+        }
+
+        // Abrir Nova Tela
+
+        // Pegamos o elemento Button (AbrirNovaTela) na tela, pelo ID
+        val btAbrirNovaTela = findViewById<Button>(R.id.btAbrirNovaTela)
+
+        // Adicionamos um listener para o btAbrirNovaTela
+        btAbrirNovaTela.setOnClickListener {
+            // Criamos a Intent (intenção) de ir dessa tela para a ResultadoActivity
+            val intentNovaTela = Intent(this, ResultadoActivity::class.java)
+
+            // Registramos a Intent no Android, especificando que é uma Activity
+            startActivity(intentNovaTela)
         }
     }
 }
