@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ocean_Android_Intro_13_e_15_09_2022">
+
         <activity
             android:name=".ResultadoActivity"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
