@@ -27,8 +27,14 @@ class MainActivity : AppCompatActivity() {
             // Tudo que escrevermos dentro deste bloco será executado
             // assim que o Button for clicado
 
-            // Alterar o texto do TextView
-            tvResultado.text = etNome.text
+            val nome = etNome.text
+
+            if (nome.isNotBlank()) {
+                // Alterar o texto do TextView
+                tvResultado.text = nome
+            } else {
+                etNome.error = "Digite um nome válido!"
+            }
         }
     }
 }
